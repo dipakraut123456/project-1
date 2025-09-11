@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <title>PULSE FEED - Capturing the pulse of the world</title>
+    <link rel="stylesheet" href=" shikar style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="#" onclick="reload()" class="logo">
+                <img src="./pulsefeed.png" alt="Pulse Feed Logo">
+            </a>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li onclick="onNavItemClick('ipl')"><i class="fa-solid fa-indian-rupee-sign"></i> India</li>
+                    <li onclick="onNavItemClick('finance')"><i class="fas fa-chart-line"></i> Finance</li>
+                    <li onclick="onNavItemClick('business')"><i class="fa-solid fa-briefcase"></i> Business</li>
+                    <li onclick="onNavItemClick('Technology')"><i class="fas fa-microchip"></i> Technology</li>
+                </ul>
+                <div class="search-bar">
+                    <input id="search-text" type="text" placeholder="Search news...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <!-- <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button> -->
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- <div class="hero-banner">
+            <div class="hero-content">
+                <h1>Stay Informed with Pulse Feed</h1>
+                <p>Get the latest news from around the world in real-time</p>
+            </div>
+        </div> -->
+        
+        <div id="cards-container" class="grid-container"></div>
+        
+        <!-- <div class="newsletter">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Get daily news updates delivered to your inbox</p>
+            <form>
+                <input type="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div> -->
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="./pulsefeed.png" alt="Pulse Feed Logo">
+                <p>Capturing the pulse of the world</p>
+            </div>
+            <div class="footer-links">
+                <h3>Categories</h3>
+                <ul>
+                    <li onclick="onNavItemClick('india')">India</li>
+                    <li onclick="onNavItemClick('finance')">Finance</li>
+                    <li onclick="onNavItemClick('business')">Business</li>
+                    <li onclick="onNavItemClick('Technology')">Technology</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Pulse Feed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" id="news-img" alt="News Image">
+                <div class="card-badge">Trending</div>
+            </div>
+            <div class="card-body">
+                <span class="news-category">Technology</span>
+                <h3 id="news-title">Title</h3>
+                <p id="news-desc">Description</p>
+                <div class="card-footer">
+                    <span class="news-source" id="news-source">Source</span>
+                    <button class="share-button"><i class="fas fa-share-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="script sh.js"></script>
+</body>
+</html>
